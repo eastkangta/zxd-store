@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+               http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<!--必须要有name属性，不能为空 -->
+	<persistence-unit name="storePU" transaction-type="RESOURCE_LOCAL">
+		<!--可选 -->
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<!--可选 -->
+		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+		<!--可选 -->
+		<validation-mode>NONE</validation-mode>
+		<class>com.zxd.core.entity.User</class>
+		<!--厂商的特定属性 -->
+		<properties>
+			<property name="javax.persistence.validation.mode" value="none" />
+			<!--显示最终执行的sql -->
+			<property name="hibernate.show_sql" value="true" />
+			<!--格式化显示最终执行的sql -->
+			<property name="hibernate.formate_sql" value="true" />
+			<!--自动输出schema创建DDL语句 -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+</persistence>
