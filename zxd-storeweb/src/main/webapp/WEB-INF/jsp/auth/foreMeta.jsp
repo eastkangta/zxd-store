@@ -5,5 +5,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!-- script -->
-<script type="text/javascript" src="/resources/fore/jquery/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="/resources/fore/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="/resources/jquery/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/resources/jquery/jquery-ui-1.10.3.custom.min.js"></script>

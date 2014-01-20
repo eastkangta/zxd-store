@@ -9,15 +9,12 @@
 </head>
 <body>
 
-
 	<form action="<c:url value="/fore/index"/>" >
 		<input name="username">
 		<input name="password">
 		<input type="submit">
-		啊是嗲时间的空间拉时间看得见
+		权限管理
 	</form>
-	
-	<a href="<c:url value="/forward/fore/reg"/>">注册</a>
 </body>
 
 </html>

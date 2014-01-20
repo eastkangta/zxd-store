@@ -1,10 +1,16 @@
 package com.zxd.core.entity;
 
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -13,7 +19,8 @@ public class ModuleGroup {
 	
 	@Id
 	@Column(nullable=false)
-	private String id;
+	@GeneratedValue(strategy= GenerationType.IDENTITY )
+	private Long id;
 	
 	@Column
 	private String name ;
@@ -24,15 +31,8 @@ public class ModuleGroup {
 	@Temporal(TemporalType.DATE)
 	private Date updateDate;
 	
-	/*@ManyToOne(targetEntity=Role.class)
-	private Role role;*/
 	
-	
-	/*@ManyToMany
-	@JoinTable(	
-				uniqueConstraints=@UniqueConstraint(columnNames={"moduleGroupId","moduleId"}),
-				joinColumns=@JoinColumn(name="moduleGroupId"),
-				inverseJoinColumns=@JoinColumn(name="moduleId")
-				)		
-	private List<Module> modules ;*/
+	@OneToMany
+	@JoinTable(joinColumns={@JoinColumn(name="moduleGroupId")}, inverseJoinColumns ={@JoinColumn(name="moduleId")})
+	private Set<Module> modules ;
 }

@@ -21,7 +21,8 @@
 	<mvc:annotation-driven/>
 	
 	<!-- <mvc:default-servlet-handler/> -->
-	<mvc:view-controller path="/" view-name="fore/index"/>
+	<mvc:view-controller path="/" view-name="fore/index" />
+	<mvc:view-controller path="/auth" view-name="auth/index" />
 	
 	<!-- Activates annotation-based bean configuration -->
 
