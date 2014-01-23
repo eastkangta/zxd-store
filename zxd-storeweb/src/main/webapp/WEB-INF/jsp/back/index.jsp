@@ -8,13 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<iframe>
+		<iframe></iframe>
+		<iframe></iframe>
+		<iframe></iframe>
+	</iframe>
 
-	<form action="<c:url value="/fore/index"/>" >
-		<input name="username">
-		<input name="password">
-		<input type="submit">
-		啊是嗲时间的空间拉时间看得见
-	</form>
 </body>
 
 </html>

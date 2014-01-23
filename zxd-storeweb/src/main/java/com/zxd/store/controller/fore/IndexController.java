@@ -1,6 +1,8 @@
 package com.zxd.store.controller.fore;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +20,8 @@ public class IndexController {
 	private IUserService userService ;
 	
 	@RequestMapping(value="/index")
-	public @ResponseBody String index(){
+	public @ResponseBody String index(HttpServletRequest request){
+		Cookie cookies[] = request.getCookies();
 		User user = new User();
 		user.setName("郑晓东");
 		user.setPassword("131313");
